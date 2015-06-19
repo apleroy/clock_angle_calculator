@@ -12,7 +12,7 @@ Gem::Specification.new do |spec|
   spec.summary       = %q{This gem provides functionality for computing the angle between hour and minute hands on an analog clock.}
   spec.description   = %q{Given a datetime or an hour/minute value pair, this gem returns an angle (180 degrees or less) between the
                           hour and minute hands on a clock if the time were to be modeled on an analog clock.}
-  spec.homepage      = "github.com/apleroy/clock_angle_calculator"
+  spec.homepage      = ""
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org by setting 'allowed_push_host', or
