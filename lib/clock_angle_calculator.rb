@@ -1,7 +1,7 @@
 require "clock_angle_calculator/version"
 
 module ClockAngleCalculator
-  
+
   #given a datetime, model the time on an analog clock
   #return the angle between the hour and minute hands on the clock
   def self.calculate_angle_datetime(datetime)
