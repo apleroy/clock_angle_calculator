@@ -62,6 +62,14 @@ describe ClockAngleCalculator do
       expect(ClockAngleCalculator.calculate_angle_datetime("String")).to eq(nil)
     end
 
+    it 'calculates a value' do
+      expect(ClockAngleCalculator.calculate_angle_datetime(Time.now)).to_not eq(nil)
+    end
+
+    it 'calculates a value' do
+      expect(4).to_not eq(nil)
+    end
+
     it 'calculates 12:15' do
       expect(ClockAngleCalculator.calculate_angle_datetime(DateTime.new(now.year, now.month, now.day, 12, 15, 0, 0))).to eq(82.5)
     end

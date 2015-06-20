@@ -1,14 +1,13 @@
 require "clock_angle_calculator/version"
 
 module ClockAngleCalculator
-
-
-
+  
   #given a datetime, model the time on an analog clock
   #return the angle between the hour and minute hands on the clock
   def self.calculate_angle_datetime(datetime)
-    if datetime.is_a?(DateTime)
-      hour = datetime.strftime("%H").to_f
+    puts datetime
+    if datetime.is_a?(DateTime) || datetime.is_a?(Time) || datetime.is_a?(Date)
+      hour = (datetime.strftime("%H")).to_f % 12
       minute = datetime.strftime("%M").to_f
       return calculate_angle_helper(hour, minute)
     else
