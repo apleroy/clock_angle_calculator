@@ -5,7 +5,6 @@ module ClockAngleCalculator
   #given a datetime, model the time on an analog clock
   #return the angle between the hour and minute hands on the clock
   def self.calculate_angle_datetime(datetime)
-    puts datetime
     if datetime.is_a?(DateTime) || datetime.is_a?(Time) || datetime.is_a?(Date)
       hour = (datetime.strftime("%H")).to_f % 12
       minute = datetime.strftime("%M").to_f
@@ -23,11 +22,9 @@ module ClockAngleCalculator
 
   #private helper method used to determine the angle
   def self.calculate_angle_helper(hour, minute)
-
     if hour < 0 || hour > 12 || minute < 0 || minute > 59
       return nil
     end
-
     hourly_degree = (360.0 / 12.0)
     minute_degree = (360.0 / 60.0)
 
