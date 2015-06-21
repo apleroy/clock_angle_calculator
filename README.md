@@ -1,8 +1,6 @@
 # ClockAngleCalculator
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/clock_angle_calculator`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+This gem provides functionality to accept a DateTime or Time object and return the angle between the hour and minute hands if the time were modeled on an analog clock.  This gem also provides functionality to accept an hour and minute value directly.  The angle returned will always be less than or equal to 180.
 
 ## Installation
 
@@ -22,7 +20,16 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+The gem provides a module named ClockAngleCalculator which has two public methods available for use.
+
+calculate_angle_datetime(time) accepts a DateTime or Time object and returns a value between 0 and 180.
+
+calculate_angle(hour, minute) accepts hour and minute values and returns a value between 0 and 180.
+
+To call the methods in your application (example):
+ClockAngleCalculator.calculate_angle(1, 15) #returns 52.5
+
+ClockAngleCalculator.calculate_angle_datetime(@resource.created_at) #returns value based on the created_at tiemstamp for your resource.
 
 ## Development
 
@@ -32,7 +39,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/clock_angle_calculator.
+Bug reports and pull requests are welcome on GitHub at https://github.com/apleroy/clock_angle_calculator.
 
 
 ## License
